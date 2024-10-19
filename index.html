@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Delhi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Discover Delhi</div>
+        <div class="navbar-toggle" id="navbar-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar-links" id="navbar-links">
+            <a href="#home">Home</a>
+            <a href="#featured">Destinations</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#map">Map</a>
+            <a href="#food-tour">Food Tour</a>
+            <a href="#booking">Book Now</a>
+            <a href="#newsletter">Newsletter</a>
+        </div>
+    </nav>
+
+
+    <section class="hero" id="home">
+        <h1>Discover Delhi</h1>
+        <p>Explore the rich culture and vibrant streets of India's capital.</p>
+        <button onclick="scrollToSection('#featured')">Explore Now</button>
+    </section>
+
+    <section class="featured" id="featured">
+        <h2>Featured Destinations</h2>
+        <div class="destination">
+            <div class="destination-item">
+                <img src="img/Red Fort.jpg" alt="Red Fort">
+                <h3>Red Fort</h3>
+                <p>A UNESCO World Heritage Site with stunning Mughal architecture.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/Qutub Minar.jpg" alt="Qutub Minar">
+                <h3>Qutub Minar</h3>
+                <p>The tallest brick minaret in the world, a stunning landmark.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/India Gate.jpg" alt="India Gate">
+                <h3>India Gate</h3>
+                <p>A war memorial dedicated to Indian soldiers, set in a beautiful garden.</p>
+            </div>
+        </div>
+        <div class="destination">
+            <div class="destination-item">
+                <img src="img/Humayun's Tomb.jpg" alt="Red Fort">
+                <h3>Humayun's Tomb</h3>
+                <p>Humayun's Tomb is a UNESCO World Heritage Site and a stunning example of Mughal architecture. Built
+                    in 1569.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/Lotus Temple.jpg" alt="Qutub Minar">
+                <h3>Lotus Temple</h3>
+                <p>The Lotus Temple, completed in 1986, is a Bahá'í House of Worship renowned for its flower-like
+                    structure.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/Akshardham Temple.jpg" alt="India Gate">
+                <h3> Akshardham Temple</h3>
+                <p> Akshardham Temple, inaugurated in 2005, is a sprawling complex showcasing traditional Indian
+                    architecture and spirituality.</p>
+            </div>
+        </div>
+        <div class="destination">
+            <div class="destination-item">
+                <img src="img/jama masjid.jpg" alt="Red Fort">
+                <h3>Jama Masjid</h3>
+                <p>Jama Masjid, one of the largest mosques in India, was commissioned by Mughal Emperor Shah Jahan in
+                    1650.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/chandni chk.jpg" alt="Qutub Minar">
+                <h3>Chandni Chowk</h3>
+                <p>Chandni Chowk is a bustling market area in Old Delhi, famous for its vibrant street food, traditional
+                    shops, and historic sites. Established in the 17th century.</p>
+            </div>
+            <div class="destination-item">
+                <img src="img/Lodhi Grd.jpg" alt="India Gate">
+                <h3>Lodhi Garden</h3>
+                <p>Lodhi Garden, spread over 90 acres, is a serene green space that showcases the architectural remnants
+                    of the Lodhi Dynasty.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="slider">
+            <img src="img/Humayun's Tomb.jpg" alt="Gallery 1" class="slide" onclick="openLightbox(this)">
+            <img src="img/India Gate.jpg" alt="Gallery 2" class="slide" onclick="openLightbox(this)">
+            <img src="img/Qutub Minar.jpg" alt="Gallery 3" class="slide" onclick="openLightbox(this)">
+            <img src="img/Lotus Temple.jpg" alt="Gallery 1" class="slide" onclick="openLightbox(this)">
+            <img src="img/Red Fort.jpg" alt="Gallery 2" class="slide" onclick="openLightbox(this)">
+            <img src="img/Lodhi Grd.jpg" alt="Gallery 3" class="slide" onclick="openLightbox(this)">
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+
+    <section class="map" id="map">
+        <h2>Explore Delhi on the Map</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.0756161678487!2d77.21972041506224!3d28.6102442824982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce21f0e837d1d%3A0x1ef13dc9bbfcd6b6!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1623965989938!5m2!1sen!2sin"
+            allowfullscreen></iframe>
+    </section>
+
+    <section class="food-tour" id="food-tour">
+        <h2>Join Our Food Tour</h2>
+        <p>Experience the flavors of Delhi with our guided food tours, taking you to the best street food spots and
+            local restaurants!</p>
+        <p>Perfect for food lovers and group outings!</p>
+        <button onclick="openModal()">Learn More</button>
+    </section>
+
+    <section class="booking" id="booking">
+        <h2>Book Your Trip</h2>
+        <p>Fill in the details below to reserve your spot!</p>
+        <form id="booking-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Travel Dates" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest updates on travel deals and offers!</p>
+        <input type="email" placeholder="Your Email" required>
+        <button>Subscribe</button>
+    </section>
+
+ 
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <span class="close">&times;</span>
+        <img src="" id="lightbox-img">
+    </div>
+
+  
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2>Food Tour Details</h2>
+            <p>Join us for an unforgettable food tour experience in Delhi, where you will taste a variety of delicious
+                local dishes and learn about the rich culinary history of the city.</p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Developer: <strong>Danish Raja</strong></p>
+            <p>Email: <a href="mailto:danishhaqqani785@gmail.com">danishhaqqani785@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/danish-raja-b3375723b" target="_blank">View Profile</a>
+            </p>
+            <p>GitHub: <a href="https://github.com/Daniishraza" target="_blank">Visit GitHub</a></p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Danish Raja. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
